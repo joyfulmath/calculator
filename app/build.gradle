@@ -8,8 +8,8 @@ android {
         applicationId "com.joyfulmath.calculator"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
         //打破65k方法的限制
         multiDexEnabled true
         buildConfigField "String", "buglyId", "\"a5ccc98e68\""
@@ -26,4 +26,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies.appcompatV7
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile rootProject.ext.dependencies.multidex
 }

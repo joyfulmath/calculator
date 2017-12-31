@@ -2,6 +2,10 @@ package com.joyfulmath.common.mvp;
 
 import android.support.multidex.MultiDexApplication;
 
+import com.joyfulmath.common.utils.DeviceInfo;
+import com.joyfulmath.common.utils.SharedPreferencesHelper;
+import com.joyfulmath.common.utils.TraceLog;
+
 /**
  * Created by demanlu on 2017/1/25.
  */
@@ -32,7 +36,6 @@ public abstract class BaseApp extends MultiDexApplication implements Thread.Unca
         info = init();
         // DeviceInfo工具
         DeviceInfo.initialize(this, info.APPLICATION_ID);
-        UserInfoUtils.init(this);
         SharedPreferencesHelper.init(this);
         ImageLoadManger.getsInstance().initManager(this);
         /**demanlu@20170109 later we will combine vipabctv & vipjrtv
