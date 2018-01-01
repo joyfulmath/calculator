@@ -14,6 +14,17 @@ android {
         multiDexEnabled true
         buildConfigField "String", "buglyId", "\"a5ccc98e68\""
     }
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'joyfulkey'
+            keyPassword 'joyfulmath123'
+            storeFile file('joyfulkey.jks')
+            storePassword 'joyfulabc'
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
